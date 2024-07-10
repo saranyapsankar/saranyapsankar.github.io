@@ -1,10 +1,10 @@
 import React from "react";
 import { forwardRef } from 'react';
 
-const Summary = forwardRef((props)=> {
+const Summary = forwardRef((props, ref)=> {
     const { refList } = props;
     return (
-        <section className="h-5/6 py-20 mt-12 text-gray-400" ref={(ref) => { refList[0] = ref }}>
+        <section className="h-5/6 py-20 mt-12 text-gray-400 item-bounce-r" ref={(ref) => { refList[0] = ref }}>
         <div className="flex justify-between font-serif font-bold text-3xl">
         <span>&#8220;</span>
         <span>&#8221;</span>

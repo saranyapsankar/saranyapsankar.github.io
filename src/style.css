@@ -1,3 +1,236 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cust-pop {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 5%;
+        left: 0;
+        transform: rotate(90deg);
+        margin-left: -20px;
+        border-width: 10px 10px;
+        border-style: solid;
+        border-color: rgba(51, 65, 85, 1) transparent transparent transparent;
+      }
+}
+
+.snackbar {
+    visibility: hidden;
+    width: 100px;
+    background-color: #0c540b;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: absolute;
+    z-index: 1;
+    right: -70%;
+    bottom: 30px;
+    font-size: 1rem;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+  .snackbar.show {
+    visibility: visible; 
+   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+   animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  .frame-1 {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.2s;
+  }
+  .frame-2 {
+    opacity: 0;
+    animation: drop 0.4s linear forwards 0.2s;
+  }
+  .wel-div {
+    :nth-child(1) {
+        opacity: 0;
+        animation: drop 0.4s linear forwards 0.2s;
+    }
+    :nth-child(2) {
+        opacity: 0;
+        animation: drop 0.4s linear forwards 0.4s;
+    }
+    :nth-child(3) {
+        opacity: 0;
+        animation: drop 0.4s linear forwards 0.6s;
+    }
+    :nth-child(4) {
+        opacity: 0;
+        animation: drop 0.4s linear forwards 0.8s;
+    }
+    :nth-child(5) {
+        opacity: 0;
+        animation: drop 0.4s linear forwards 1s;
+    }
+    :nth-child(6) {
+        opacity: 0;
+        animation: drop 0.4s linear forwards 1.2s;
+    }
+    :nth-child(7) {
+        opacity: 0;
+        animation: drop 0.4s linear forwards 1.4s;
+    }
+    :nth-child(8) {
+        opacity: 0;
+        animation: drop 0.4s linear forwards 1.6s;
+    }
+    :nth-child(9) {
+        opacity: 0;
+        animation: drop 0.4s linear forwards 1.8s;
+    }
+    :nth-child(10) {
+        opacity: 0;
+        animation: drop 0.4s linear forwards 2s;
+    }
+  }
+
+  @keyframes drop {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    65% {
+        transform: translateY(-17px);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(-22px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slidein {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
+  @keyframes animate-in-and-out {
+    entry 0%  {
+      opacity: 0; transform: translateY(100%);
+    }
+    entry 100%  {
+      opacity: 1; transform: translateY(0);
+    }
+  
+    exit 0% {
+      opacity: 1; transform: translateY(0);
+    }
+    exit 100% {
+      opacity: 0; transform: translateY(-100%);
+    }
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      clip-path: inset(45% 20% 45% 20%);
+    }
+    to {
+      opacity: 1;
+      clip-path: inset(0% 0% 0% 0%);
+    }
+  }
+
+  @keyframes bounceInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-2000px);
+    }
+    60% {
+      transform: translateX(20px);
+    }
+    80% {
+      transform: translateX(-5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes bounceInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(2000px);
+    }
+    60% {
+      transform: translateX(-20px);
+    }
+    80% {
+      transform: translateX(5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+.frame-text {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-timeline: scroll(block);
+}
+.on-scroll {
+  animation-timeline: scroll();
+  animation-range: 0 100vh;
+}
+
+.item-in-out {
+  animation: linear animate-in-and-out;
+	animation-timeline: view();
+}
+
+.item-reveal {
+  animation: linear reveal both;
+  animation-duration: 1s;
+}
+  
+.item-bounce-l {
+  animation-name: bounceInLeft;
+  animation-duration: 1s;
+}
+.item-bounce-r {
+  animation-name: bounceInRight;
+  animation-duration: 1s;
+}
