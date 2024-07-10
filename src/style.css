@@ -219,16 +219,17 @@
 .item-in-out {
   animation: linear animate-in-and-out;
 	animation-timeline: view();
-}
+  animation-duration: 3s;
+  }
 
 .item-reveal {
   animation: linear reveal both;
-  animation-duration: 1s;
+  animation-duration: 2s;
 }
   
 .item-bounce-l {
   animation-name: bounceInLeft;
-  animation-duration: 1s;
+  animation-duration: 2s;
 }
 .item-bounce-r {
   animation-name: bounceInRight;
