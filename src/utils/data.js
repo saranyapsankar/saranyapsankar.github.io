@@ -273,4 +273,35 @@ export const experienceList = [
       name: 'Angular - The Complete Guide (2022 Edition)',
       logo: 'https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/t1ujun3nwdoehf5k0qaf'
     },
+  ];
+
+  export const projects = [
+    {
+      name: 'Portfolio',
+      logo: 'https://github.com/saranyapsankar/saranyapsankar.github.io/tree/main/src/assets/portfolio.png',
+      link: 'https://saranyapsankar.github.io/',
+      git:'https://github.com/saranyapsankar/saranyapsankar.github.io',
+      description: 'A portfolio website built with React and deployed using github pages'
+    },
+    {
+      name: 'Food Delivery App',
+      logo: 'https://github.com/saranyapsankar/saranyapsankar.github.io/tree/main/src/assets/food-delivery.png',
+      link: 'https://saranyapsankar.github.io/foodiee.github.io/',
+      git: 'https://github.com/saranyapsankar/foodiee.github.io',
+      description: 'A food delivery app built with React and deployed using github pages'
+    },
+    {
+      name: 'Energy dashboard app',
+      logo: 'https://github.com/saranyapsankar/saranyapsankar.github.io/tree/main/src/assets/energy-dashboard.png',
+      link: 'https://saranyapsankar.github.io/angular-energy-app/',
+      git:'https://github.com/saranyapsankar/angular-energy-app',
+      description: 'An energy dashboard app built with Angular and deployed using github pages'
+    },
+    {
+      name: 'Core JS',
+      logo: 'https://github.com/saranyapsankar/saranyapsankar.github.io/tree/main/src/assets/core-js.png',
+      link: 'https://saranyapsankar.github.io/core-explore/core-js-contents/',
+      git:'https://github.com/saranyapsankar/core-explore',
+      description: 'A small website built with react. This was done to explore deploying Multiple React + Vite Apps into a Single Repository Using GitHub Page'
+    }
   ]

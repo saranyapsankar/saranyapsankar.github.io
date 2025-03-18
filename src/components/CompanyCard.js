@@ -2,7 +2,7 @@ import React from "react";
 const CompanyCard = ({ experience, showIndex, setShowIndex }) => {
   return (
     <div className="shadow-md shadow-green-300 border border-green-900 rounded-md hover:cursor-pointer">
-      <div className="p-3 bg-black border-green-900 border-b-4 item-in-out" onClick={() => { setShowIndex(!showIndex) }}>
+      <div className="p-3 dark:bg-black dark:text-white bg-white text-green-950 border-green-900 border-b-4 item-in-out" onClick={() => { setShowIndex(!showIndex) }}>
         <div className="text-xl font-bold">
           {experience.jobTitle}
           {!showIndex ? (
@@ -19,7 +19,7 @@ const CompanyCard = ({ experience, showIndex, setShowIndex }) => {
       </div>
 
       {showIndex && (
-        <ul className="list-disc text-xs font-normal opacity-70 font-display gap-2 flex flex-col m-2 ml-4 pl-4 item-reveal">
+        <ul className="list-disc text-xs font-normal opacity-70 font-display gap-2 flex flex-col m-2 ml-4 pl-4 item-reveal text-green-950 dark:text-white">
           {experience?.detailedInfo?.map((item, index) => (
             <li key={index}>{item} </li>
           ))}

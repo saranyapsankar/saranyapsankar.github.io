@@ -7,7 +7,7 @@ const Skills = forwardRef((props, ref) => {
   const [selectedTab, setSelectedTab] = useState(0)
   return (
     <div
-      className="p-3 flex flex-col gap-2 shadow-md shadow-green-300 border border-green-900 rounded-md bg-gray-800 relative"
+      className="p-3 flex flex-col gap-2 shadow-md shadow-green-300 border border-green-900 rounded-md dark:bg-gray-800 relative text-green-950 dark:text-white"
       ref={(ref) => {
         refList[2] = ref;
       }}
@@ -15,8 +15,8 @@ const Skills = forwardRef((props, ref) => {
         <div className="flex rounded-md self-center">
         {
         skillsObject?.map((skillItem, index) => (
-            <button key={skillItem.headerLabel+index} className={`text-sm leading-4 border border-gray-700 rounded-sm px-3
-             text-center min-w-24 w-auto py-3 hover:bg-green-700 ${selectedTab === index ? 'bg-green-700' : 'bg-gray-900'}`}
+            <button key={skillItem.headerLabel+index} className={`text-sm text-black leading-4 border border-gray-700 rounded-sm px-3
+             text-center min-w-24 w-auto py-3 hover:bg-green-700 ${selectedTab === index ? 'bg-green-700 text-white' : 'dark:bg-gray-900 bg-white dark:text-white'}`}
              onClick={()=>{
                 setSelectedTab(index);
              }}>{skillItem.headerLabel}</button>
@@ -31,8 +31,8 @@ const Skills = forwardRef((props, ref) => {
             {skillItem?.skillList?.map((item) => (
               <div
                 key={item.title}
-                className="w-24 h-20 rounded-md bg-neutral-800 text-sm flex flex-col items-center 
-            shadow-sm shadow-green-300 justify-evenly py-2 text-center item-in-out"
+                className="w-24 h-20 rounded-md bg-green-50 dark:bg-neutral-800 dark:text-white text-sm flex flex-col items-center 
+            shadow-md shadow-green-400 justify-evenly py-2 text-center item-in-out"
               >
                 <img
                   className={`rounded-lg ${item?.addClass}`}
